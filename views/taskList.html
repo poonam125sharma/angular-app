@@ -1,0 +1,17 @@
+<div class="col-sm-4">
+    <button class="btn btn-sm btn-success pull-left">
+        <i class="fa fa-square-o"></i>
+    </button>
+</div>
+<div class="col-sm-4 text-center">
+    <span>{{ListTask.taskName | uppercase}}</span>
+</div>
+<div class="col-sm-4">
+    <button ng-click="remove(ListTask)" class="btn btn-sm btn-danger pull-right">
+        <i class="fa fa-trash"></i>
+    </button>
+
+    <a href="#/addTask/edit/{{ListTask.id}}}" class="btn btn-sm btn-success pull-right" style="margin-right:20px;">
+        <i class="fa fa-pencil-square-o"></i>
+    </a>
+</div>

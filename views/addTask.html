@@ -1,0 +1,32 @@
+<div class="col-sm-12">
+	<div class="jumbotron text-center">
+		<h1>Add Note / Task Below</h1>
+	</div>
+	<form name="taskForm">
+
+		<div class="alert alert-danger alert-dismissible" role="alert" ng-show="taskForm.$dirty && !taskForm.$valid">
+				<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+				<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+				<span class="sr-only">Error:</span>
+				Please enter valid task name. Digits and special characters not allowed.
+		</div>
+		<div class="form-group">
+			<input type="text" name="taskName" class="form-control" placeholder="Task" ng-model="ListTask.taskName" required ng-pattern="/^[a-zA-Z\s]*$/">
+			
+		</div>
+
+		<div class="form-group">
+			<a href="#/" class="btn btn-success btn-lg btn-block" ng-click="taskForm.$valid && save()">
+				<span class="fa fa-send"></span>
+				Save
+			</a>
+		</div>
+
+		<div class="form-group">
+			<a href="#/" class="btn btn-default btn-lg btn-block">
+				<span class="fa fa-window-close"></span>
+				Cancel
+			</a>
+		</div>
+	</form>	
+</div>
